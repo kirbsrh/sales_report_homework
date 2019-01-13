@@ -158,11 +158,9 @@ def sum_numbers(numbers):
         0
     """
     
-    for i, number in enumerate(numbers):
-        if i > 0:
-            sum_of_numbers = number(i) + number(i+1)
-        else:
-            return(0)
+    sum_of_numbers = 0
+    for number in numbers:
+        sum_of_numbers = sum_of_numbers + number
 
 
     return sum_of_numbers
@@ -187,8 +185,11 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
+    product_of_numbers = 1
+    for number in numbers:
+        product_of_numbers = product_of_numbers * number
 
-    return None
+    return product_of_numbers
 
 
 def join_strings(words):
@@ -206,8 +207,11 @@ def join_strings(words):
         >>> join_strings([])
         ''
     """
+    new_word = ""
+    for word in words:
+        new_word = new_word + word
 
-    return "Not the right thing"
+    return new_word
 
 
 def average(numbers):
@@ -228,8 +232,12 @@ def average(numbers):
     (Think of the best way to handle an empty input list, though,
     a feel free to provide a good solution here.)
     """
+    sum_of_numbers = 0
+    for number in numbers:
+        sum_of_numbers = sum_of_numbers + number
 
-    return 0
+    average_of_numbers = sum_of_numbers/len(numbers) 
+    return average_of_numbers
 
 
 def join_strings_with_comma(words):
