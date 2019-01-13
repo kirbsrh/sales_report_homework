@@ -256,8 +256,15 @@ def join_strings_with_comma(words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
     """
+    new_string_with_comma = ""
+    for word in words[0:-1]:
+            new_string_with_comma = new_string_with_comma + word
+            new_string_with_comma = new_string_with_comma + "," + " "
 
-    return ""
+    new_string_with_comma = new_string_with_comma + words[-1]
+            
+
+    return new_string_with_comma
 
 
 def reverse_list(items):
@@ -280,8 +287,8 @@ def reverse_list(items):
         >>> orig
         ['apple', 'berry', 'cherry']
     """
-
-    return []
+    new_items = items[::-1]
+    return new_items
 
 
 def reverse_list_in_place(items):
@@ -303,8 +310,9 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-
-    return []
+    print(items[::-1])
+    print("oren needs a string")
+    return items[::-1]
 
 
 def duplicates(items):
