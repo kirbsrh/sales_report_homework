@@ -80,7 +80,10 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-    correct_numbers = (sorted(numbers))
+    if len(numbers) > 0:
+        correct_numbers = (sorted(numbers))
+    else:
+        return(None)
 
     return (correct_numbers[0])
 
@@ -101,7 +104,10 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
-    correct_numbers = (sorted(numbers))
+    if len(numbers) > 0:
+        correct_numbers = (sorted(numbers))
+    else:
+        return(None)    
     return correct_numbers[-1]
 
 
@@ -310,9 +316,11 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-    print(items[::-1])
-    print("oren needs a string")
-    return items[::-1]
+    reversed = items[::-1]
+    for i, item in enumerate(items):
+        items[i] = reversed[i]
+
+    return 
 
 
 def duplicates(items):
@@ -337,8 +345,13 @@ def duplicates(items):
         >>> orig
         ['apple', 'apple', 'berry']
     """
-
-    return []
+    list_of_duplicates = []
+    for i, item in enumerate(items):
+        if item in items[i+1:]:
+            if item not in list_of_duplicates:
+                list_of_duplicates.append(item)
+        
+    return list_of_duplicates
 
 
 def find_letter_indices(words, letter):
@@ -365,8 +378,16 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
+    letter_list = []
+    for word in words:
+        if letter in word:
+            for i, all_letter in enumerate(word):
+                if all_letter == letter:
+                    letter_list.append(i)
 
-    return []
+        else:
+            letter_list.append(None)    
+    return letter_list
 
 
 #####################################################################
