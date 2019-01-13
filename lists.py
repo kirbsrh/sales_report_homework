@@ -82,7 +82,7 @@ def smallest_int(numbers):
     """
     correct_numbers = (sorted(numbers))
 
-    return correct_numbers[0]
+    return (correct_numbers[0])
 
 
 def largest_int(numbers):
@@ -119,12 +119,12 @@ def halvesies(numbers):
         >>> halvesies([1, 5])
         [0.5, 2.5]
     """
-    divided_by_two()
+    divided_by_two = []
     for number in numbers:
         divided_by_two.append((float(number)/2))
 
 
-    return divided_by_two()
+    return (divided_by_two)
 
 
 def word_lengths(words):
@@ -135,11 +135,11 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
-    word_length()
+    word_length = []
     for word in words:
         word_length.append(len(word))
 
-    return length()
+    return (word_length)
 
 
 def sum_numbers(numbers):
@@ -157,7 +157,7 @@ def sum_numbers(numbers):
         >>> sum_numbers([])
         0
     """
-    i = 0
+    
     for i, number in enumerate(numbers):
         if i > 0:
             sum_of_numbers = number(i) + number(i+1)
