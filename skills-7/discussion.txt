@@ -14,10 +14,7 @@ Discussion
 
   Explain your answer.
 
-
-
-
-
+  I believe that the correct answer is C. Doubly linked list.  A linked list knows the location of its tail and head at all times.  A doubly linked list allows us to remove from the tail in contant time O(1) because with doubly linked lists the previous node is tracked as well.  Linked lists can already remove nodes from the beginning with constant time O(1) because they know the next node - this feature remains in doubly linked lists.  
 
 
 
@@ -34,17 +31,14 @@ Discussion
 
   Explain your answer.
 
-
-
-
-
+  I think that the answer is B. a Dictionary.  Dictionaries support searching and adding/removing items in constant time O(1).
 
 
 
 3. Explain why looking up, adding elements, and removing elements from a 
    dictionary or hash map are all O(1) operations.
 
-
+Dictionaries use the same storage style as hashmaps.  When looking up values, actually uses two arrays.  Python looks up the hash in the indices array.  Python takes the value stored there and that is the index in the entries array.  Hashes are unique.  In this way, dictionaries are very similar to a set.  The unique-ness allows us to identify what we are looking for in memory quickly.
 
 
 
@@ -52,26 +46,24 @@ Discussion
 4. Explain why removing elements from or adding elements to an arbitrary
    location in a Python list are O(n) operations.
 
-
-
-
+   To add or remove from anywhere in a Python list other than the end you would need to traverse the list and touch each item until you found what you were looking for.  The act of touching each item is O(n) runtime.
 
 
 
 5. What is the correct runtime for:
 
-  - Bubble Sort?
+  - Bubble Sort? O(n**2) Quadratic
 
-  - Quicksort?
+  - Quicksort? O(n log n)
 
-  - Merge Sort?
+  - Merge Sort? O(n log n)
 
-  - Insertion Sort?
+  - Insertion Sort? O(n**2) Quadratic
 
 
 6. What is the difference between a tree and a graph?
 
-
+All trees are graphs, but not all graphs are trees.  Trees are directed, acyclic graphs.  Trees also have hierarchy and graphs do not.  Graphs are/can be used to model relationships.  A tree is like a special, more-restricted form of a graph.
 
 
 
@@ -80,23 +72,23 @@ Discussion
   Given the list [8, 4, 1, 6, 5, 2, 7, 3]:
   When this function is initially called, what are the values of:
 
-    - lst -
+    - lst - [8,4,1,6,5,2,7,3]
 
-    - pivot -
+    - pivot - 5
 
-    - lo -
+    - lo - [4, 1, 2, 3]
 
-    - hi -
+    - hi - [8, 6, 7]
 
 
 
   When the quicksort is first called recursively on the `lo` list, what are the
   values of:
 
-  - lst -
+  - lst - [4, 1, 2, 3]
 
-  - pivot -
+  - pivot - 2
 
-  - lo -
+  - lo - [ 1]
 
-  - hi -
+  - hi - [4, 3]
